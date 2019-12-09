@@ -1,0 +1,14 @@
+{
+    "name": "AppendProductStockNowAfter",
+    "alias": "appendproductstocknowafter",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\AppendProductStockNowAfter\\Providers\\AppendProductStockNowAfterServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
