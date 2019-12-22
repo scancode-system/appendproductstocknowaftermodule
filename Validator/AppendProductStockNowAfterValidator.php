@@ -16,7 +16,7 @@ class AppendProductStockNowAfterValidator
 		];
 	}
 
-	public function filterRules(){
+	public function filterRules($data){
 		return [
 			['rule' => ['date_delivery_now' => 'required|date_format:d/m/Y'], 'filter' => 'dateDMY'],
 			['rule' => ['date_delivery_now' => 'required|date_format:j/n/Y'], 'filter' => 'dateDMY'],

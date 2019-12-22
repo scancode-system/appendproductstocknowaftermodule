@@ -16,7 +16,7 @@ class InsertAppendsRecordsProductStockNowAfter extends Migration
     public function up()
     {
         $validation = Validation::where('module_name', 'ValidationProduct')->first();
-        Append::create(['validation_id' => $validation->id, 'module' => 'AppendProductStockNowAfter', 'alias' => 'Estoque Atual e Futuro']);
+        Append::create(['validation_id' => $validation->id, 'module' => 'AppendProductStockNowAfter', 'alias' => 'Estoque Atual e Futuro (Produto)']);
     }
 
     /**
