@@ -8,6 +8,16 @@ use Illuminate\Database\Eloquent\Factory;
 class AppendProductStockNowAfterServiceProvider extends ServiceProvider
 {
     /**
+     * @var string $moduleName
+     */
+    protected $moduleName = 'AppendProductStockNowAfter';
+
+    /**
+     * @var string $moduleNameLower
+     */
+    protected $moduleNameLower = 'appendproductstocknowafter';
+
+    /**
      * Boot the application events.
      *
      * @return void
@@ -35,11 +45,18 @@ class AppendProductStockNowAfterServiceProvider extends ServiceProvider
     protected function registerConfig()
     {
         $this->publishes([
+            module_path($this->moduleName, 'Config/config.php') => config_path($this->moduleNameLower . '.php'),
+        ], 'config');
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/config.php'), $this->moduleNameLower
+        );
+        
+        /*$this->publishes([
             __DIR__.'/../Config/config.php' => config_path('appendproductstocknowafter.php'),
         ], 'config');
         $this->mergeConfigFrom(
             __DIR__.'/../Config/config.php', 'appendproductstocknowafter'
-        );
+        );*/
     }
 
 
