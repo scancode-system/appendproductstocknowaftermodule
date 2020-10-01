@@ -5,6 +5,7 @@ namespace Modules\AppendProductStockNowAfter\Services;
 
 use Modules\Portal\Services\Validation\Data\InfoValidationService;
 use Modules\Portal\Services\Validation\Data\InfoValidationsService;
+use Exception;
  
 
 class InfoService extends InfoValidationService
@@ -34,7 +35,7 @@ class InfoService extends InfoValidationService
 	}
 
 
-	public function columnsFormat()
+	public function columnsFormat($header)
 	{
 		return ['date_delivery_now' => InfoValidationsService::DATE_FORMAT, 'date_delivery_after' => InfoValidationsService::DATE_FORMAT];
 	}
